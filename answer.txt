@@ -8,4 +8,4 @@
     //chuyển đến branch feature-vananhbui-merge
     git checkout feature-vananhbui-merge
     //merge branch
-    //git merge feature-vananhbui
+    git merge feature-vananhbui
