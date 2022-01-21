@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: php.Dockerfile
-    image: php:7.3-fpm-alpine
+    # image: php:7.3-fpm-alpine
     container_name: php-73
     volumes:
     - ./:/var/www/html

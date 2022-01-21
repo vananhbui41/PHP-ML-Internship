@@ -1,7 +1,8 @@
 -- 1.	Viết lệnh sql để có thể lấy thông tin những bản ghi của categories và số lượng items của mỗi categories đó (count items)
 select categories.*, count(items.id)
-	from categories left join items on categories.id = category_id
+	from categories inner join items on categories.id = category_id
     group by categories.id;
+    
 
 -- 2.	Viết lệnh sql để có thể lấy thông tin những bản ghi của categories và tổng số amount của các items trong categories đó (sum items.amount)
 select categories.*, sum(items.amount)
@@ -13,7 +14,7 @@ select categories.*, sum(items.amount)
 select categories.* , items.name as item_name, amount 
 	from categories left join items 
 	on categories.id = category_id
-    where items.amount > 40 ;
+    where items.amount > 30 ;
 
 -- 4.	Viết lệnh sql để xóa những categories mà đang không có items nào
 SET SQL_SAFE_UPDATES = 0;
